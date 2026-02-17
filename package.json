@@ -1,0 +1,46 @@
+{
+  "name": "file-handler",
+  "version": "1.0.0",
+  "description": "Universal file handler module supporting Local, S3, and Cloudinary providers for Node.js + Express + TypeScript.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsx src/examples/start-server.ts",
+    "dev:test": "tsx watch src/examples/test-server.ts",
+    "start": "node dist/examples/start-server.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test-start": "node dist/examples/test-server.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "prepare": "npm run build",
+  "dependencies": {
+    "async-mutex": "^0.5.0",
+    "dotenv": "^17.2.3",
+    "multer": "^2.0.2",
+    "uuid": "^13.0.0"
+  },
+  "peerDependencies": {
+  "express": "^4.22.1"
+},
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.10.2",
+    "@vitest/ui": "^4.0.17",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.17"
+  }
+}
